@@ -1,4 +1,4 @@
-package designPatterns.singleton;
+package designPatterns.src.main.java.singleton;
 
 import java.util.LinkedList;
 

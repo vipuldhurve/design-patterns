@@ -1,4 +1,4 @@
-package designPatterns.strategy.paymentStrategy;
+package designPatterns.src.main.java.strategy.paymentStrategy;
 
 public class RazorPayPaymentStrategy implements PaymentStrategy {
     String upiId;

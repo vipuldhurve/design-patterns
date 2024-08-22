@@ -1,4 +1,4 @@
-package designPatterns.prototype;
+package designPatterns.src.main.java.prototype;
 
 import java.util.ArrayList;
 import java.util.List;

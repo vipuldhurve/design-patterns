@@ -1,7 +1,7 @@
-package designPatterns.strategy.subscriptionPlans;
+package designPatterns.src.main.java.strategy.subscriptionPlans;
 
-import designPatterns.strategy.Subscription;
-import designPatterns.strategy.paymentStrategy.CreditCardPaymentStrategy;
+import designPatterns.src.main.java.strategy.Subscription;
+import designPatterns.src.main.java.strategy.paymentStrategy.CreditCardPaymentStrategy;
 
 public class PremiumPlan extends Subscription {
 //  1-year plan

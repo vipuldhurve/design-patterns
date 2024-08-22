@@ -1,8 +1,8 @@
-package designPatterns.strategy.subscriptionPlans;
+package designPatterns.src.main.java.strategy.subscriptionPlans;
 
-import designPatterns.strategy.Subscription;
-import designPatterns.strategy.paymentStrategy.CreditCardPaymentStrategy;
-import designPatterns.strategy.paymentStrategy.RazorPayPaymentStrategy;
+import designPatterns.src.main.java.strategy.Subscription;
+import designPatterns.src.main.java.strategy.paymentStrategy.CreditCardPaymentStrategy;
+import designPatterns.src.main.java.strategy.paymentStrategy.RazorPayPaymentStrategy;
 
 public class GoldPlan extends Subscription {
     //6 months plan with emi options for creditCard payment type
