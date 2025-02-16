@@ -1,4 +1,4 @@
-package designPatterns.src.main.java.strategy.subscriptionPlans;
+package strategy.subscriptionPlans;
 
 public enum IdType {
     UPI,

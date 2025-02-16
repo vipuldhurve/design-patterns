@@ -1,4 +1,4 @@
-package designPatterns.src.main.java.strategy.paymentStrategy;
+package strategy.paymentStrategy;
 
 public interface PaymentStrategy {
     public void pay(double amount);

@@ -1,7 +1,7 @@
-package designPatterns.src.main.java.strategy.subscriptionPlans;
+package strategy.subscriptionPlans;
 
-import designPatterns.src.main.java.strategy.Subscription;
-import designPatterns.src.main.java.strategy.paymentStrategy.RazorPayPaymentStrategy;
+import strategy.Subscription;
+import strategy.paymentStrategy.RazorPayPaymentStrategy;
 
 public class BasicPlan extends Subscription {
 //    15-day plan

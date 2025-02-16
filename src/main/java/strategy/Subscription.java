@@ -1,10 +1,11 @@
-package designPatterns.src.main.java.strategy;
+package strategy;
 
-import designPatterns.src.main.java.strategy.paymentStrategy.PaymentStrategy;
-import designPatterns.src.main.java.strategy.subscriptionPlans.BasicPlan;
-import designPatterns.src.main.java.strategy.subscriptionPlans.GoldPlan;
-import designPatterns.src.main.java.strategy.subscriptionPlans.IdType;
-import designPatterns.src.main.java.strategy.subscriptionPlans.PremiumPlan;
+
+import strategy.paymentStrategy.PaymentStrategy;
+import strategy.subscriptionPlans.BasicPlan;
+import strategy.subscriptionPlans.GoldPlan;
+import strategy.subscriptionPlans.IdType;
+import strategy.subscriptionPlans.PremiumPlan;
 
 public abstract class Subscription {
     private final double amount;
@@ -22,6 +23,7 @@ public abstract class Subscription {
     public double getAmount() {
         return amount;
     }
+
     public void makePayment(){
         this.paymentStrategy.pay(amount);
     }

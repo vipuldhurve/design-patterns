@@ -1,4 +1,4 @@
-package designPatterns.src.main.java.strategy.paymentStrategy;
+package strategy.paymentStrategy;
 
 public class CreditCardPaymentStrategy implements PaymentStrategy {
     String cardNumber;
