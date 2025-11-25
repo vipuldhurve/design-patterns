@@ -1,8 +1,7 @@
 package strategy.subscriptionPlans;
 
 
-import strategy.Subscription;
-import strategy.paymentStrategy.CreditCardPaymentStrategy;
+import strategy.paymentStrategy.CreditCard;
 
 public class PremiumPlan extends Subscription {
 //  1-year plan
@@ -11,7 +10,7 @@ public class PremiumPlan extends Subscription {
     public PremiumPlan( String creditCardNumber) {
         super(15_000);
         this.creditCardNumber = creditCardNumber;
-        super.setPaymentStrategy(new CreditCardPaymentStrategy(creditCardNumber));
+        super.setPaymentStrategy(new CreditCard(creditCardNumber));
     }
 
     public void setCreditCardNumber(String creditCardNumber) {

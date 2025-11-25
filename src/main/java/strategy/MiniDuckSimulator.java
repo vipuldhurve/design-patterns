@@ -1,12 +1,13 @@
 package strategy;
 
 import strategy.Ducks.Duck;
+import strategy.Ducks.MallardDuck;
 import strategy.Ducks.ModelDuck;
 import strategy.behavior.FlyRocketPowered;
 
 public class MiniDuckSimulator {
     public static void main(String[] args) {
-        Duck mallard = new strategy.Ducks.MallardDuck();
+        Duck mallard = new MallardDuck();
         mallard.display();
         mallard.performFly();
         mallard.performQuack();

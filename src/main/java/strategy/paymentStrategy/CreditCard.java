@@ -1,9 +1,9 @@
 package strategy.paymentStrategy;
 
-public class CreditCardPaymentStrategy implements PaymentStrategy {
+public class CreditCard implements PaymentStrategy {
     String cardNumber;
 
-    public CreditCardPaymentStrategy(String cardNumber){
+    public CreditCard(String cardNumber){
         this.cardNumber = cardNumber;
     }
 

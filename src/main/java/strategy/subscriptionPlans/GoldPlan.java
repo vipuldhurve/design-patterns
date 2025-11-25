@@ -1,8 +1,7 @@
 package strategy.subscriptionPlans;
 
-import strategy.Subscription;
-import strategy.paymentStrategy.RazorPayPaymentStrategy;
-import strategy.paymentStrategy.CreditCardPaymentStrategy;
+import strategy.paymentStrategy.Upi;
+import strategy.paymentStrategy.CreditCard;
 
 public class GoldPlan extends Subscription {
     //6 months plan with emi options for creditCard payment type
@@ -18,8 +17,8 @@ public class GoldPlan extends Subscription {
     }
 
     protected void setPaymentStrategyByPaymentIdType() {
-        if(this.idtype == IdType.CREDIT_CARD) this.setPaymentStrategy(new CreditCardPaymentStrategy(this.paymentId));
-        else this.setPaymentStrategy(new RazorPayPaymentStrategy(this.paymentId));
+        if(this.idtype == IdType.CREDIT_CARD) this.setPaymentStrategy(new CreditCard(this.paymentId));
+        else this.setPaymentStrategy(new Upi(this.paymentId));
     }
 
     public void setPaymentDetails(IdType idtype, String paymentId){

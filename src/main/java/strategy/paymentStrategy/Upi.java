@@ -1,9 +1,9 @@
 package strategy.paymentStrategy;
 
-public class RazorPayPaymentStrategy implements PaymentStrategy {
+public class Upi implements PaymentStrategy {
     String upiId;
 
-    public RazorPayPaymentStrategy(String upiId){
+    public Upi(String upiId){
         this.upiId = upiId;
     }
 
