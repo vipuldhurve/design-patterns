@@ -1,4 +1,4 @@
-package designPatterns.src.main.java.prototype;
+package prototype;
 
 public abstract class Store implements Cloneable{
     protected String id;

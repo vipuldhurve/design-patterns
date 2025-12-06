@@ -1,4 +1,4 @@
-package designPatterns.src.main.java.prototype;
+package prototype;
 
 public class Book {
     private String Id;

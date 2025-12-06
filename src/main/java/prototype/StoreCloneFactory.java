@@ -1,4 +1,4 @@
-package designPatterns.src.main.java.prototype;
+package prototype;
 
 public class StoreCloneFactory {
     public static Store getClone(Store store) throws CloneNotSupportedException {

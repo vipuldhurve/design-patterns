@@ -1,7 +1,8 @@
-package designPatterns.src.main.java.prototype;
+package prototype;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class BookStore extends Store {
     private List<Book> books;
