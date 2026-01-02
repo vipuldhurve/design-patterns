@@ -1,16 +1,19 @@
-package singleton;
+package singleton.breakingSingleton;
+
+import singleton.MySingletonClone;
 
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Objects;
 
-public class Scrabble extends MySingletonClone implements Serializable {
+public class ScrabbleFix extends MySingletonClone implements Serializable {
     //Eager initialization
-    //private static Scrabble scrabble = new Scrabble();
+    //private static ScrabbleBreakFix scrabble = new ScrabbleBreakFix();
 
     //Lazy initialization : if instance is required then only it is created
-    private static Scrabble scrabble = null;
+    private static ScrabbleFix scrabble = null;
 
     private static final String[] scrabbleLetters = {"A", "A", "A", "A", "A", "A", "A",
             "A", "A", "B", "B", "C", "C", "D", "D", "D", "D", "E", "E", "E", "E", "E",
@@ -24,10 +27,25 @@ public class Scrabble extends MySingletonClone implements Serializable {
 
     private static boolean firstThread = true;
 
-    private Scrabble() {
+    // Reflections fix
+    private ScrabbleFix() {
+        if (Objects.nonNull(scrabble)) {
+            throw new IllegalStateException("Constructor instantiation not allowed for " + this.getClass().getName());
+        }
     }
 
-    public static Scrabble getInstance() {
+    // Serialization fix
+    protected Object readResolve(){
+        return scrabble;
+    }
+
+    // Clone fix
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException();
+    }
+
+    public static ScrabbleFix getInstance() {
         if (scrabble == null) {
             if (firstThread) {
                 firstThread = false;
@@ -39,9 +57,9 @@ public class Scrabble extends MySingletonClone implements Serializable {
                 }
             }
             //Thread safe singleton using synchronized block
-            synchronized (Scrabble.class) {
+            synchronized (ScrabbleFix.class) {
                 if (scrabble == null) {
-                    scrabble = new Scrabble();
+                    scrabble = new ScrabbleFix();
                     Collections.shuffle(scrabble.letters);
                 }
             }
